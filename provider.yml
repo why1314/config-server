@@ -1,0 +1,38 @@
+# server:
+#   port: 8000
+# spring:
+#   application:
+#     name: microservice-provider-user
+
+#   datasource:
+#     driver-class-name: com.mysql.jdbc.Driver
+#     url: jdbc:mysql://127.0.0.1:3306/plkj?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+#     username: root
+#     password: root
+#   jpa:
+#     show-sql: true #让hibernate打印执行的sql
+
+# # Spring Boot Actuator监控组件
+# management:
+#   endpoint:
+#     health:
+#       show-details: always
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*" #暴露所有的端点
+
+# #logging:
+# #  level:
+# #    root: info
+# #    org.hibernate: info
+
+# eureka:
+#   instance:
+#     prefer-ip-address: true
+#   client:
+#     service-url:
+#       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+# #      defaultZone: http://localhost:8764/eureka/
+
+

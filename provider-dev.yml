@@ -1,0 +1,51 @@
+spring:
+#   rabbitmq:
+#     host: 192.168.211.129
+  application:
+    name: microservice-provider-user
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/plkj?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: root
+  jpa:
+    show-sql: true #让hibernate打印执行的sql
+
+#   zipkin:
+#     base-url: http://localhost:9411
+#   sleuth:
+#     sampler:
+#       # 采样率，模式0.1，也就是10%，为了便于观察效果，改为1.0，也就是100%。生产环境建议保持默认。
+#       probability: 1.0
+
+# Spring Boot Actuator监控组件
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有的端点
+
+#logging:
+#  level:
+#    root: info
+#    org.hibernate: info
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+#      defaultZone: http://localhost:8764/eureka/
+
+env:
+ dev
+
+# logging:
+#   level:
+#     root: INFO
+#     org.springframework.cloud.sleuth: DEBUG
